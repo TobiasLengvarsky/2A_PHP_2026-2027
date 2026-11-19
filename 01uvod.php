@@ -51,32 +51,41 @@
     odstrániť poslednú čiarku za posledným číslom
 
     NADSTAVBA resp. bonus
-    každé piate číslo bude mať nádhodnú veľkosť písma a náhodnú farbu
+    každé piate číslo bude mať náhodnú veľkosť písma a náhodnú farbu
 
-    */
-    echo "<br>";
-$nahodneCislo = rand(0, 1000);
-echo "Náhodné číslo: " . $nahodneCislo . "<br>";
+    */   
+ echo "</br>";
 
-if ($nahodneCislo % 2 == 0) {
-    echo "Náhodné číslo je párne. <br> Vypisujem párne čísla:<br>";
-    for ($i = 0; $i <= $nahodneCislo; $i += 2) {
-        if ($i < $nahodneCislo) {
-            echo $i . ", ";
-        } else {
-            echo $i; 
-        }
+  $nahodneCislo = rand(0, 1000);
+  $counter = 1;
+
+  if($nahodneCislo % 2 == 0){
+    for($i = 0; $i <= $nahodneCislo; $i+=2){
+      $farbaR = rand(0,255);
+      $farbaG = rand(0,255);
+      $farbaB = rand(0,255);
+      $nahodnaVelkost = rand(10,50);
+      if($counter % 5 == 0){
+        echo "<span style='font-size: {$nahodnaVelkost}px; color: rgb({$farbaR}, {$farbaG}, {$farbaB});'>$i</span>" . ", ";
+        
+      }else{
+        echo $i . ", ";
+      }
+      $counter++;
     }
-} else {
-    echo "Náhodné číslo je nepárne. <br> Vypisujem nepárne čísla:<br>";
-    for ($i = 1; $i <= $nahodneCislo; $i += 2) {    
-        if ($i < $nahodneCislo - 1) {
-            echo $i . ", "; 
-        } else {
-            echo $i; 
-        }
+  }else{
+    for($i = 1; $i <= $nahodneCislo; $i+=2){
+      $farbaR = rand(0,255);
+      $farbaG = rand(0,255);
+      $farbaB = rand(0,255);
+      $nahodnaVelkost = rand(10,50);
+      if($counter % 5 == 0){
+        echo "<span style='font-size: {$nahodnaVelkost}px; color: rgb({$farbaR}, {$farbaG}, {$farbaB});'>$i</span>" . ", ";
+      }else{
+        echo $i . ", ";
+      }
+      $counter++;
     }
-}
-    
+  }
 
     ?>
