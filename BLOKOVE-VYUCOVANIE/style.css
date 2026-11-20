@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  color: #305050;
+  font-family: Arial, sans-serif;
+}
+
+.booking-form {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 680px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.field {
+  flex: 1;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  padding: 20px;
+  flex-basis: 100%;
+  background-color: #305050;
+  color: white;
+  border-radius: 20px;
+  width: 100%;
+  border: none;
+  font-size: large;
+}
+
+h1 {
+  color: #305050;
+}
+
+hr {
+  margin-bottom: 30px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 81px;
+  max-height: 200px;
+}
